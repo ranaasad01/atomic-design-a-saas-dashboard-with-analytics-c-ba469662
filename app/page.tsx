@@ -478,7 +478,12 @@ export default function HomePage() {
               </p>
               <div className="mt-5 space-y-2">
                 {[90, 65, 45].map((pct, i) => (
-                  <div key={i} className="flex items-center gap-2">
+                  <div
+                    key={i}
+                    className="flex items-center gap-2"
+                    style={i === 1 ? {
+                      color: "#84cc16"
+                    } : undefined}>
                     <div className="flex-1 h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                       <div className="h-full bg-gradient-to-r from-red-500 to-teal-500 rounded-full" style={{ width: `${pct}%` }} />
                     </div>
