@@ -214,10 +214,7 @@ export default function HomePage() {
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[92vh] flex flex-col justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         {/* Background glow */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
-        >
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full bg-indigo-500/10 dark:bg-indigo-500/8 blur-[120px]" />
           <div className="absolute top-1/3 right-0 w-[400px] h-[400px] rounded-full bg-violet-500/8 blur-[100px]" />
         </div>
@@ -225,12 +222,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: copy */}
-            <motion.div
-              variants={sectionVariants}
-              initial="hidden"
-              animate="visible"
-              className="flex flex-col gap-6"
-            >
+            <motion.div variants={sectionVariants} initial="hidden" animate="visible" className="flex flex-col gap-6">
               <motion.div variants={fadeInUp}>
                 <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200 dark:border-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-xs font-semibold tracking-wide">
                   <Sparkles className="w-3.5 h-3.5" />
@@ -238,10 +230,7 @@ export default function HomePage() {
                 </span>
               </motion.div>
 
-              <motion.h1
-                variants={fadeInUp}
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white tracking-tight text-balance leading-[1.1]"
-              >
+              <motion.h1 variants={fadeInUp} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white tracking-tight text-balance leading-[1.1]">
                 {t("hero.title.line1")}{" "}
                 <span className="bg-gradient-to-r from-indigo-500 to-violet-600 bg-clip-text text-transparent">
                   {t("hero.title.accent")}
@@ -249,60 +238,38 @@ export default function HomePage() {
                 {t("hero.title.line2")}
               </motion.h1>
 
-              <motion.p
-                variants={fadeInUp}
-                className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg text-pretty"
-              >
+              <motion.p variants={fadeInUp} className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg text-pretty">
                 {t("hero.subtitle")}
               </motion.p>
 
-              <motion.div
-                variants={fadeInUp}
-                className="flex flex-wrap gap-3 pt-2"
-              >
-                <Link
-                  href="/dashboard"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-[0_2px_8px_rgba(99,102,241,0.4)] hover:shadow-[0_4px_20px_rgba(99,102,241,0.5)] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
-                >
+              <motion.div variants={fadeInUp} className="flex flex-wrap gap-3 pt-2">
+                <Link href="/dashboard" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-[0_2px_8px_rgba(99,102,241,0.4)] hover:shadow-[0_4px_20px_rgba(99,102,241,0.5)] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2">
                   {t("hero.cta.primary")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link
-                  href="/analytics"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-gray-50 dark:hover:bg-white/10 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
-                >
+                <Link href="/analytics" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-gray-50 dark:hover:bg-white/10 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2">
                   {t("hero.cta.secondary")}
                 </Link>
               </motion.div>
 
-              <motion.div
-                variants={fadeInUp}
-                className="flex items-center gap-6 pt-2"
-              >
+              <motion.div variants={fadeInUp} className="flex items-center gap-6 pt-2">
                 {[
                   { label: t("hero.stat1.label"), value: t("hero.stat1.value") },
                   { label: t("hero.stat2.label"), value: t("hero.stat2.value") },
                   { label: t("hero.stat3.label"), value: t("hero.stat3.value") },
-                ].map((stat) => (
-                  <div key={stat.label} className="flex flex-col">
-                    <span className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">
-                      {stat.value}
-                    </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
-                      {stat.label}
-                    </span>
-                  </div>
-                ))}
+                ].map((stat) => (<div key={stat.label} className="flex flex-col">
+                  <span className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">
+                    {stat.value}
+                  </span>
+                  <span className="text-xs text-gray-500 dark:text-gray-400">
+                    {stat.label}
+                  </span>
+                </div>))}
               </motion.div>
             </motion.div>
 
             {/* Right: mini dashboard preview */}
-            <motion.div
-              variants={scaleIn}
-              initial="hidden"
-              animate="visible"
-              className="relative"
-            >
+            <motion.div variants={scaleIn} initial="hidden" animate="visible" className="relative">
               <div className="relative rounded-2xl bg-white dark:bg-gray-900 border border-black/5 dark:border-white/10 shadow-[0_4px_24px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)] p-5 overflow-hidden">
                 {/* Header row */}
                 <div className="flex items-center justify-between mb-4">
@@ -328,41 +295,13 @@ export default function HomePage() {
                       margin={{ top: 4, right: 4, left: -24, bottom: 0 }}
                     >
                       <defs>
-                        <linearGradient
-                          id="signupGrad"
-                          x1="0"
-                          y1="0"
-                          x2="0"
-                          y2="1"
-                        >
-                          <stop
-                            offset="5%"
-                            stopColor="#6366F1"
-                            stopOpacity={0.25}
-                          />
-                          <stop
-                            offset="95%"
-                            stopColor="#6366F1"
-                            stopOpacity={0}
-                          />
+                        <linearGradient id="signupGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#6366F1" stopOpacity={0.25} />
+                          <stop offset="95%" stopColor="#6366F1" stopOpacity={0} />
                         </linearGradient>
-                        <linearGradient
-                          id="leadGrad"
-                          x1="0"
-                          y1="0"
-                          x2="0"
-                          y2="1"
-                        >
-                          <stop
-                            offset="5%"
-                            stopColor="#10B981"
-                            stopOpacity={0.2}
-                          />
-                          <stop
-                            offset="95%"
-                            stopColor="#10B981"
-                            stopOpacity={0}
-                          />
+                        <linearGradient id="leadGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#10B981" stopOpacity={0.2} />
+                          <stop offset="95%" stopColor="#10B981" stopOpacity={0} />
                         </linearGradient>
                       </defs>
                       <CartesianGrid
@@ -427,11 +366,7 @@ export default function HomePage() {
               </div>
 
               {/* Floating KPI badge */}
-              <motion.div
-                animate={{ y: [0, -6, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-900 border border-black/5 dark:border-white/10 rounded-xl px-4 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.1)] flex items-center gap-3"
-              >
+              <motion.div animate={{ y: [0, -6, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-900 border border-black/5 dark:border-white/10 rounded-xl px-4 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.1)] flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
                   <Users className="w-4 h-4 text-white" />
                 </div>
@@ -448,29 +383,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ── KPI STRIP ────────────────────────────────────────────────────── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50 border-y border-black/5 dark:border-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            variants={sectionVariants}
-            {...motionProps(sectionVariants)}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-4"
-          >
+          <motion.div variants={sectionVariants} {...motionProps(sectionVariants)} className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {kpis.map((kpi) => {
               const Icon = kpi.icon;
               return (
-                <motion.div
-                  key={kpi.label}
-                  variants={fadeInUp}
-                  whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                  className="relative bg-white dark:bg-gray-900 rounded-2xl border border-black/5 dark:border-white/10 p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)] overflow-hidden group cursor-default"
-                >
+                <motion.div key={kpi.label} variants={fadeInUp} whileHover={{ y: -4, transition: { duration: 0.2 } }} className="relative bg-white dark:bg-gray-900 rounded-2xl border border-black/5 dark:border-white/10 p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)] overflow-hidden group cursor-default">
                   <div className="flex items-start justify-between mb-3">
-                    <div
-                      className={`w-9 h-9 rounded-xl bg-gradient-to-br ${kpi.color} flex items-center justify-center shadow-[0_2px_8px_var(--glow)]`}
-                      style={{ "--glow": kpi.glow } as React.CSSProperties}
-                    >
+                    <div className={`w-9 h-9 rounded-xl bg-gradient-to-br ${kpi.color} flex items-center justify-center shadow-[0_2px_8px_var(--glow)]`} style={{ "--glow": kpi.glow } as React.CSSProperties}>
                       <Icon className="w-4 h-4 text-white" />
                     </div>
                     <span
@@ -478,8 +400,7 @@ export default function HomePage() {
                         kpi.positive
                           ? "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
                           : "bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400"
-                      }`}
-                    >
+                      }`}>
                       {kpi.change}
                     </span>
                   </div>
@@ -495,18 +416,10 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── FEATURES ─────────────────────────────────────────────────────── */}
-      <section
-        id="features"
-        className="py-24 md:py-32 px-4 sm:px-6 lg:px-8"
-      >
+      <section id="features" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            variants={fadeInUp}
-            {...motionProps(fadeInUp)}
-            className="text-center mb-16"
-          >
+          <motion.div variants={fadeInUp} {...motionProps(fadeInUp)} className="text-center mb-16">
             <span className="inline-block px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-semibold tracking-wide mb-4">
               {t("features.eyebrow")}
             </span>
@@ -519,25 +432,24 @@ export default function HomePage() {
           </motion.div>
 
           {/* Bento-style asymmetric grid */}
-          <motion.div
-            variants={sectionVariants}
-            {...motionProps(sectionVariants)}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4"
-          >
+          <motion.div variants={sectionVariants} {...motionProps(sectionVariants)} className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Large feature card */}
             <motion.div
               variants={scaleIn}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="md:col-span-2 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-2xl p-8 text-white shadow-[0_4px_24px_rgba(99,102,241,0.3)] relative overflow-hidden"
-            >
-              <div
-                aria-hidden
-                className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/5 -translate-y-1/2 translate-x-1/4"
-              />
+              style={{
+                color: "#84cc16"
+              }}>
+              <div aria-hidden className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/5 -translate-y-1/2 translate-x-1/4" />
               <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-5">
                 <Activity className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">
+              <h3
+                className="text-xl font-bold mb-2"
+                style={{
+                  fontSize: "64px"
+                }}>
                 {t("features.card1.title")}
               </h3>
               <p className="text-indigo-100 leading-relaxed text-sm max-w-md">
@@ -560,11 +472,7 @@ export default function HomePage() {
             </motion.div>
 
             {/* Tall single card */}
-            <motion.div
-              variants={fadeInUp}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="bg-white dark:bg-gray-900 rounded-2xl border border-black/5 dark:border-white/10 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)]"
-            >
+            <motion.div variants={fadeInUp} whileHover={{ y: -4, transition: { duration: 0.2 } }} className="bg-white dark:bg-gray-900 rounded-2xl border border-black/5 dark:border-white/10 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)]">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-5 shadow-[0_2px_8px_rgba(16,185,129,0.3)]">
                 <Target className="w-5 h-5 text-white" />
               </div>
@@ -578,10 +486,7 @@ export default function HomePage() {
                 {[90, 65, 45].map((pct, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <div className="flex-1 h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"
-                        style={{ width: `${pct}%` }}
-                      />
+                      <div className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full" style={{ width: `${pct}%` }} />
                     </div>
                     <span className="text-xs text-gray-400 w-8 text-right">
                       {pct}%
@@ -595,12 +500,7 @@ export default function HomePage() {
             {features.slice(2).map((feat) => {
               const Icon = feat.icon;
               return (
-                <motion.div
-                  key={feat.title}
-                  variants={fadeInUp}
-                  whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                  className="bg-white dark:bg-gray-900 rounded-2xl border border-black/5 dark:border-white/10 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)]"
-                >
+                <motion.div key={feat.title} variants={fadeInUp} whileHover={{ y: -4, transition: { duration: 0.2 } }} className="bg-white dark:bg-gray-900 rounded-2xl border border-black/5 dark:border-white/10 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)]">
                   <div className="w-9 h-9 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 flex items-center justify-center mb-4">
                     <Icon className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
                   </div>
@@ -616,18 +516,10 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── SOCIAL PROOF ─────────────────────────────────────────────────── */}
-      <section
-        id="about"
-        className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50"
-      >
+      <section id="about" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            variants={fadeInUp}
-            {...motionProps(fadeInUp)}
-            className="text-center mb-16"
-          >
+          <motion.div variants={fadeInUp} {...motionProps(fadeInUp)} className="text-center mb-16">
             <span className="inline-block px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-semibold tracking-wide mb-4">
               {t("testimonials.eyebrow")}
             </span>
@@ -636,11 +528,7 @@ export default function HomePage() {
             </h2>
           </motion.div>
 
-          <motion.div
-            variants={sectionVariants}
-            {...motionProps(sectionVariants)}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          >
+          <motion.div variants={sectionVariants} {...motionProps(sectionVariants)} className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t_item, idx) => (
               <motion.div
                 key={t_item.name}
@@ -648,8 +536,7 @@ export default function HomePage() {
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className={`bg-white dark:bg-gray-900 rounded-2xl border border-black/5 dark:border-white/10 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)] flex flex-col gap-4 ${
                   idx === 1 ? "md:-mt-4 md:mb-4" : ""
-                }`}
-              >
+                }`}>
                 <div className="flex items-center gap-1">
                   {Array.from({ length: t_item.stars }).map((_, s) => (
                     <Star
@@ -669,8 +556,7 @@ export default function HomePage() {
                     onError={(e) => {
                       (e.currentTarget as HTMLImageElement).src =
                         `https://ui-avatars.com/api/?name=${encodeURIComponent(t_item.name)}&background=6366F1&color=fff&size=64`;
-                    }}
-                  />
+                    }} />
                   <div>
                     <p className="text-sm font-semibold text-gray-900 dark:text-white">
                       {t_item.name}
@@ -685,18 +571,10 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── PRICING ──────────────────────────────────────────────────────── */}
-      <section
-        id="pricing"
-        className="py-24 md:py-32 px-4 sm:px-6 lg:px-8"
-      >
+      <section id="pricing" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            variants={fadeInUp}
-            {...motionProps(fadeInUp)}
-            className="text-center mb-16"
-          >
+          <motion.div variants={fadeInUp} {...motionProps(fadeInUp)} className="text-center mb-16">
             <span className="inline-block px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-semibold tracking-wide mb-4">
               {t("pricing.eyebrow")}
             </span>
@@ -708,124 +586,96 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <motion.div
-            variants={sectionVariants}
-            {...motionProps(sectionVariants)}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start"
-          >
-            {pricingPlans.map((plan) => (
-              <motion.div
-                key={plan.name}
-                variants={scaleIn}
-                whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className={`relative rounded-2xl p-7 flex flex-col gap-5 ${
-                  plan.highlighted
-                    ? "bg-gradient-to-br from-indigo-600 to-violet-700 text-white shadow-[0_8px_32px_rgba(99,102,241,0.35)] border border-indigo-400/30"
-                    : "bg-white dark:bg-gray-900 border border-black/5 dark:border-white/10 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)]"
-                }`}
-              >
-                {plan.highlighted && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-amber-400 text-amber-900 text-xs font-bold tracking-wide shadow-sm">
-                    {t("pricing.popular")}
-                  </span>
-                )}
-                <div>
-                  <p
-                    className={`text-sm font-semibold mb-1 ${
-                      plan.highlighted
-                        ? "text-indigo-200"
-                        : "text-gray-500 dark:text-gray-400"
-                    }`}
-                  >
-                    {plan.name}
-                  </p>
-                  <div className="flex items-end gap-1">
-                    <span
-                      className={`text-4xl font-bold tracking-tight ${
-                        plan.highlighted
-                          ? "text-white"
-                          : "text-gray-900 dark:text-white"
-                      }`}
-                    >
-                      {plan.price}
-                    </span>
-                    {plan.period && (
-                      <span
-                        className={`text-sm mb-1 ${
-                          plan.highlighted
-                            ? "text-indigo-200"
-                            : "text-gray-500 dark:text-gray-400"
-                        }`}
-                      >
-                        {plan.period}
-                      </span>
-                    )}
-                  </div>
-                  <p
-                    className={`text-xs mt-2 leading-relaxed ${
-                      plan.highlighted
-                        ? "text-indigo-200"
-                        : "text-gray-500 dark:text-gray-400"
-                    }`}
-                  >
-                    {plan.description}
-                  </p>
-                </div>
-
-                <ul className="space-y-2.5 flex-1">
-                  {plan.features.map((feat) => (
-                    <li key={feat} className="flex items-start gap-2.5">
-                      <CheckCircle
-                        className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
-                          plan.highlighted
-                            ? "text-indigo-200"
-                            : "text-indigo-500 dark:text-indigo-400"
-                        }`}
-                      />
-                      <span
-                        className={`text-sm ${
-                          plan.highlighted
-                            ? "text-indigo-100"
-                            : "text-gray-700 dark:text-gray-300"
-                        }`}
-                      >
-                        {feat}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href="/dashboard"
-                  className={`w-full text-center py-3 rounded-xl font-semibold text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
+          <motion.div variants={sectionVariants} {...motionProps(sectionVariants)} className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            {pricingPlans.map((plan) => (<motion.div
+              key={plan.name}
+              variants={scaleIn}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className={`relative rounded-2xl p-7 flex flex-col gap-5 ${
+                plan.highlighted
+                  ? "bg-gradient-to-br from-indigo-600 to-violet-700 text-white shadow-[0_8px_32px_rgba(99,102,241,0.35)] border border-indigo-400/30"
+                  : "bg-white dark:bg-gray-900 border border-black/5 dark:border-white/10 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)]"
+              }`}>
+              {plan.highlighted && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-amber-400 text-amber-900 text-xs font-bold tracking-wide shadow-sm">
+                  {t("pricing.popular")}
+                </span>
+              )}
+              <div>
+                <p
+                  className={`text-sm font-semibold mb-1 ${
                     plan.highlighted
-                      ? "bg-white text-indigo-700 hover:bg-indigo-50 focus-visible:ring-white shadow-[0_2px_8px_rgba(0,0,0,0.15)]"
-                      : "bg-indigo-600 hover:bg-indigo-700 text-white focus-visible:ring-indigo-500 shadow-[0_2px_8px_rgba(99,102,241,0.3)]"
-                  }`}
-                >
-                  {plan.cta}
-                </Link>
-              </motion.div>
-            ))}
+                      ? "text-indigo-200"
+                      : "text-gray-500 dark:text-gray-400"
+                  }`}>
+                  {plan.name}
+                </p>
+                <div className="flex items-end gap-1">
+                  <span
+                    className={`text-4xl font-bold tracking-tight ${
+                      plan.highlighted
+                        ? "text-white"
+                        : "text-gray-900 dark:text-white"
+                    }`}>
+                    {plan.price}
+                  </span>
+                  {plan.period && (
+                    <span
+                      className={`text-sm mb-1 ${
+                        plan.highlighted
+                          ? "text-indigo-200"
+                          : "text-gray-500 dark:text-gray-400"
+                      }`}>
+                      {plan.period}
+                    </span>
+                  )}
+                </div>
+                <p
+                  className={`text-xs mt-2 leading-relaxed ${
+                    plan.highlighted
+                      ? "text-indigo-200"
+                      : "text-gray-500 dark:text-gray-400"
+                  }`}>
+                  {plan.description}
+                </p>
+              </div>
+              <ul className="space-y-2.5 flex-1">
+                {plan.features.map((feat) => (<li key={feat} className="flex items-start gap-2.5">
+                  <CheckCircle
+                    className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
+                      plan.highlighted
+                        ? "text-indigo-200"
+                        : "text-indigo-500 dark:text-indigo-400"
+                    }`}
+                  />
+                  <span
+                    className={`text-sm ${
+                      plan.highlighted
+                        ? "text-indigo-100"
+                        : "text-gray-700 dark:text-gray-300"
+                    }`}>
+                    {feat}
+                  </span>
+                </li>))}
+              </ul>
+              <Link
+                href="/dashboard"
+                className={`w-full text-center py-3 rounded-xl font-semibold text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
+                  plan.highlighted
+                    ? "bg-white text-indigo-700 hover:bg-indigo-50 focus-visible:ring-white shadow-[0_2px_8px_rgba(0,0,0,0.15)]"
+                    : "bg-indigo-600 hover:bg-indigo-700 text-white focus-visible:ring-indigo-500 shadow-[0_2px_8px_rgba(99,102,241,0.3)]"
+                }`}>
+                {plan.cta}
+              </Link>
+            </motion.div>))}
           </motion.div>
         </div>
       </section>
-
       {/* ── CTA BANNER ───────────────────────────────────────────────────── */}
-      <section
-        id="contact"
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50"
-      >
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            variants={scaleIn}
-            {...motionProps(scaleIn)}
-            className="relative rounded-3xl bg-gradient-to-br from-indigo-600 via-indigo-600 to-violet-700 p-10 md:p-14 text-center overflow-hidden shadow-[0_8px_40px_rgba(99,102,241,0.35)]"
-          >
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 overflow-hidden"
-            >
+          <motion.div variants={scaleIn} {...motionProps(scaleIn)} className="relative rounded-3xl bg-gradient-to-br from-indigo-600 via-indigo-600 to-violet-700 p-10 md:p-14 text-center overflow-hidden shadow-[0_8px_40px_rgba(99,102,241,0.35)]">
+            <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
               <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-white/5" />
               <div className="absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-white/5" />
             </div>
@@ -842,17 +692,11 @@ export default function HomePage() {
                 {t("cta.subtitle")}
               </p>
               <div className="flex flex-wrap items-center justify-center gap-3">
-                <Link
-                  href="/dashboard"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white text-indigo-700 font-bold text-sm hover:bg-indigo-50 transition-all duration-300 shadow-[0_2px_12px_rgba(0,0,0,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-indigo-600"
-                >
+                <Link href="/dashboard" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white text-indigo-700 font-bold text-sm hover:bg-indigo-50 transition-all duration-300 shadow-[0_2px_12px_rgba(0,0,0,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-indigo-600">
                   {t("cta.primary")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link
-                  href="/analytics"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white/10 border border-white/20 text-white font-semibold text-sm hover:bg-white/20 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                >
+                <Link href="/analytics" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white/10 border border-white/20 text-white font-semibold text-sm hover:bg-white/20 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
                   {t("cta.secondary")}
                 </Link>
               </div>
