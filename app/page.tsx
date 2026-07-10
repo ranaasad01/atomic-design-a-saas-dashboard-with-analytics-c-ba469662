@@ -230,8 +230,7 @@ export default function HomePage() {
                 </span>
               </motion.div>
 
-              <motion.h1 variants={fadeInUp} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white tracking-tight text-balance leading-[1.1]">Turn Leads Into Signups That Convert 
-                257 5758</motion.h1>
+              <motion.h1 variants={fadeInUp} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white tracking-tight text-balance leading-[1.1]">Turn Leads Into Signups That Convert</motion.h1>
 
               <motion.p variants={fadeInUp} className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg text-pretty">
                 {t("hero.subtitle")}
