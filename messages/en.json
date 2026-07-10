@@ -1,1 +1,158 @@
-{}
+{
+  "analytics": {
+    "avgConversion": "Avg Conversion",
+    "colChange": "Change",
+    "colCurrent": "Current",
+    "colMetric": "Metric",
+    "colPrevious": "Previous",
+    "colTrend": "Trend",
+    "cold": "Cold",
+    "currentMrr": "Current MRR",
+    "export": "Export",
+    "hot": "Hot",
+    "leadQualitySubtitle": "Track lead qualification status across your pipeline.",
+    "leadQualityTitle": "Lead Quality",
+    "leads": "Leads",
+    "metricsTableSubtitle": "Compare performance metrics period-over-period.",
+    "metricsTableTitle": "Key Metrics",
+    "mrr": "MRR",
+    "mrrGrowth": "MRR Growth",
+    "revenue": "Revenue",
+    "revenueSubtitle": "Monitor your total revenue and growth trajectory.",
+    "revenueTitle": "Revenue Overview",
+    "signups": "Signups",
+    "signupsLeadsSubtitle": "Your primary growth indicators at a glance.",
+    "signupsLeadsTitle": "Signups & Leads",
+    "subtitle": "Real-time insights into your business performance.",
+    "title": "Analytics",
+    "totalLeads": "Total Leads",
+    "totalRevenue": "Total Revenue",
+    "totalSignups": "Total Signups",
+    "unqualified": "Unqualified",
+    "warm": "Warm"
+  },
+  "cta": {
+    "badge": "New",
+    "primary": "Get Started",
+    "secondary": "View Demo",
+    "subtitle": "Start tracking signups and leads in minutes.",
+    "title": "Ready to grow with easy work?"
+  },
+  "dashboard": {
+    "byChannel": "By Channel",
+    "colDate": "Date",
+    "colName": "Name",
+    "colSource": "Source",
+    "colStatus": "Status",
+    "colValue": "Value",
+    "conversionFunnel": "Conversion Funnel",
+    "conversionFunnelDesc": "See where leads drop off in your sales process.",
+    "growthTrend": "Growth Trend",
+    "last12Weeks": "Last 12 Weeks",
+    "latestInbound": "Latest Inbound",
+    "leadSources": "Lead Sources",
+    "leads": "Leads",
+    "leadsBySource": "Leads by Source",
+    "leadsBySourceDesc": "Identify your most effective acquisition channels.",
+    "live": "Live",
+    "liveUpdates": "Real-time updates",
+    "recentActivity": "Recent Activity",
+    "recentLeads": "Recent Leads",
+    "recentSignups": "Recent Signups",
+    "recentSignupsDesc": "Your latest customer registrations",
+    "refresh": "Refresh",
+    "revenue": "Revenue",
+    "signups": "Signups",
+    "signupsOverTime": "Signups Over Time",
+    "signupsOverTimeDesc": "Track signup trends across weeks and months",
+    "signupsVsLeads": "Signups vs Leads",
+    "subtitle": "Monitor your growth metrics in real time",
+    "title": "Dashboard",
+    "updated": "Updated just now",
+    "viewAll": "View All",
+    "vsLastMonth": "vs last month",
+    "weeklyBreakdown": "Weekly Breakdown"
+  },
+  "features": {
+    "card1": {
+      "description": "Watch signups and leads flow in as they happen with instant notifications",
+      "title": "Real-Time Tracking"
+    },
+    "card2": {
+      "description": "Understand conversion patterns with detailed breakdowns by source and status",
+      "title": "Deep Analytics"
+    },
+    "eyebrow": "Powerful Features",
+    "subtitle": "Everything you need to grow faster",
+    "title": "Built for Growth"
+  },
+  "hero": {
+    "badge": "New",
+    "badge2": {
+      "label": "Growth",
+      "suffix": "this month"
+    },
+    "chart": {
+      "legend": {
+        "leads": "Leads",
+        "signups": "Signups"
+      },
+      "title": "Signups & Leads Trend"
+    },
+    "cta": {
+      "primary": "Start Free Trial",
+      "secondary": "View Demo"
+    },
+    "stat1": {
+      "label": "Avg Conversion",
+      "value": "24%"
+    },
+    "stat2": {
+      "label": "Active Users",
+      "value": "12K+"
+    },
+    "stat3": {
+      "label": "Uptime",
+      "value": "99.9%"
+    },
+    "subtitle": "Capture, track, and convert leads effortlessly with easy work's intelligent dashboard",
+    "title": {
+      "accent": "Signups",
+      "line1": "Turn Leads Into",
+      "line2": "That Convert"
+    }
+  },
+  "leads": {
+    "filter": {
+      "searchPlaceholder": "Search by name or email",
+      "showing": "Showing",
+      "source": "Source",
+      "status": "Status",
+      "title": "Filters"
+    },
+    "radar": {
+      "subtitle": "Distribution across channels",
+      "title": "Lead Sources"
+    },
+    "stat": {
+      "avgDeal": "Avg. Deal Value",
+      "qualified": "Qualified Leads",
+      "total": "Total Leads"
+    },
+    "subtitle": "Track and convert your pipeline in real time.",
+    "table": {
+      "title": "Recent Leads"
+    },
+    "title": "Leads"
+  },
+  "pricing": {
+    "eyebrow": "Simple, transparent pricing",
+    "popular": "Most popular",
+    "subtitle": "Choose the plan that scales with your team.",
+    "title": "Pricing"
+  },
+  "testimonials": {
+    "eyebrow": "Loved by teams",
+    "title": "What customers say"
+  }
+}

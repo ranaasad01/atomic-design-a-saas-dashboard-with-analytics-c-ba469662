@@ -1,1 +1,158 @@
-{}
+{
+  "analytics": {
+    "avgConversion": "Conversión Promedio",
+    "colChange": "Cambio",
+    "colCurrent": "Actual",
+    "colMetric": "Métrica",
+    "colPrevious": "Anterior",
+    "colTrend": "Tendencia",
+    "cold": "Frío",
+    "currentMrr": "MRR Actual",
+    "export": "Exportar",
+    "hot": "Caliente",
+    "leadQualitySubtitle": "Monitorea el estado de calificación de leads en tu pipeline.",
+    "leadQualityTitle": "Calidad de Leads",
+    "leads": "Leads",
+    "metricsTableSubtitle": "Compara métricas de rendimiento período a período.",
+    "metricsTableTitle": "Métricas Clave",
+    "mrr": "MRR",
+    "mrrGrowth": "Crecimiento MRR",
+    "revenue": "Ingresos",
+    "revenueSubtitle": "Monitorea tus ingresos totales y trayectoria de crecimiento.",
+    "revenueTitle": "Resumen de Ingresos",
+    "signups": "Registros",
+    "signupsLeadsSubtitle": "Tus indicadores de crecimiento principal de un vistazo.",
+    "signupsLeadsTitle": "Registros y Leads",
+    "subtitle": "Información en tiempo real sobre el rendimiento de tu negocio.",
+    "title": "Análisis",
+    "totalLeads": "Total de Leads",
+    "totalRevenue": "Ingresos Totales",
+    "totalSignups": "Total de Registros",
+    "unqualified": "No Calificado",
+    "warm": "Tibio"
+  },
+  "cta": {
+    "badge": "Nuevo",
+    "primary": "Comenzar",
+    "secondary": "Ver Demo",
+    "subtitle": "Comienza a rastrear registros y leads en minutos.",
+    "title": "¿Listo para crecer con trabajo fácil?"
+  },
+  "dashboard": {
+    "byChannel": "Por Canal",
+    "colDate": "Fecha",
+    "colName": "Nombre",
+    "colSource": "Fuente",
+    "colStatus": "Estado",
+    "colValue": "Valor",
+    "conversionFunnel": "Embudo de Conversión",
+    "conversionFunnelDesc": "Ve dónde los clientes potenciales se pierden en tu proceso de ventas.",
+    "growthTrend": "Tendencia de Crecimiento",
+    "last12Weeks": "Últimas 12 Semanas",
+    "latestInbound": "Últimas Entradas",
+    "leadSources": "Fuentes de Clientes Potenciales",
+    "leads": "Clientes Potenciales",
+    "leadsBySource": "Clientes Potenciales por Fuente",
+    "leadsBySourceDesc": "Identifica tus canales de adquisición más efectivos.",
+    "live": "En Vivo",
+    "liveUpdates": "Actualizaciones en tiempo real",
+    "recentActivity": "Actividad Reciente",
+    "recentLeads": "Clientes Potenciales Recientes",
+    "recentSignups": "Registros Recientes",
+    "recentSignupsDesc": "Tus últimos registros de clientes",
+    "refresh": "Actualizar",
+    "revenue": "Ingresos",
+    "signups": "Registros",
+    "signupsOverTime": "Registros a lo Largo del Tiempo",
+    "signupsOverTimeDesc": "Sigue las tendencias de registro en semanas y meses",
+    "signupsVsLeads": "Registros vs Clientes Potenciales",
+    "subtitle": "Monitorea tus métricas de crecimiento en tiempo real",
+    "title": "Panel de Control",
+    "updated": "Actualizado hace poco",
+    "viewAll": "Ver Todo",
+    "vsLastMonth": "vs mes pasado",
+    "weeklyBreakdown": "Desglose Semanal"
+  },
+  "features": {
+    "card1": {
+      "description": "Observa los registros y clientes potenciales llegar en tiempo real con notificaciones instantáneas",
+      "title": "Seguimiento en Tiempo Real"
+    },
+    "card2": {
+      "description": "Comprende los patrones de conversión con desglose detallado por fuente y estado",
+      "title": "Análisis Profundo"
+    },
+    "eyebrow": "Características Poderosas",
+    "subtitle": "Todo lo que necesitas para crecer más rápido",
+    "title": "Diseñado para Crecer"
+  },
+  "hero": {
+    "badge": "Nuevo",
+    "badge2": {
+      "label": "Crecimiento",
+      "suffix": "este mes"
+    },
+    "chart": {
+      "legend": {
+        "leads": "Clientes Potenciales",
+        "signups": "Registros"
+      },
+      "title": "Tendencia de Registros y Leads"
+    },
+    "cta": {
+      "primary": "Comenzar Prueba Gratuita",
+      "secondary": "Ver Demo"
+    },
+    "stat1": {
+      "label": "Conversión Promedio",
+      "value": "24%"
+    },
+    "stat2": {
+      "label": "Usuarios Activos",
+      "value": "12K+"
+    },
+    "stat3": {
+      "label": "Disponibilidad",
+      "value": "99.9%"
+    },
+    "subtitle": "Captura, rastrea y convierte leads sin esfuerzo con el panel inteligente de easy work",
+    "title": {
+      "accent": "Registros",
+      "line1": "Convierte Leads En",
+      "line2": "Que Se Convierten"
+    }
+  },
+  "leads": {
+    "filter": {
+      "searchPlaceholder": "Buscar por nombre o correo electrónico",
+      "showing": "Mostrando",
+      "source": "Fuente",
+      "status": "Estado",
+      "title": "Filtros"
+    },
+    "radar": {
+      "subtitle": "Distribución entre canales",
+      "title": "Fuentes de Leads"
+    },
+    "stat": {
+      "avgDeal": "Valor Promedio del Trato",
+      "qualified": "Leads Calificados",
+      "total": "Total de Leads"
+    },
+    "subtitle": "Rastrea y convierte tu pipeline en tiempo real.",
+    "table": {
+      "title": "Leads Recientes"
+    },
+    "title": "Leads"
+  },
+  "pricing": {
+    "eyebrow": "Precios simples y transparentes",
+    "popular": "Más popular",
+    "subtitle": "Elige el plan que escala con tu equipo.",
+    "title": "Precios"
+  },
+  "testimonials": {
+    "eyebrow": "Amado por equipos",
+    "title": "Lo que dicen nuestros clientes"
+  }
+}
