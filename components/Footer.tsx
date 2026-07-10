@@ -56,9 +56,9 @@ export default function Footer() {
           <motion.div variants={fadeInUp} className="col-span-1">
             <Link
               href="/"
-              className="flex items-center gap-2 mb-3 group w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg"
+              className="flex items-center gap-2 mb-3 group w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-lg"
             >
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-sky-500 to-violet-600 flex items-center justify-center shadow-[0_2px_8px_rgba(99,102,241,0.35)]">
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-red-500 to-violet-600 flex items-center justify-center shadow-[0_2px_8px_rgba(99,102,241,0.35)]">
                 <Sparkles className="w-3.5 h-3.5 text-white" />
               </div>
               <span className="font-semibold text-gray-900 dark:text-white text-sm tracking-tight">
@@ -76,7 +76,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-500 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-sky-50 dark:hover:bg-sky-500/10 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+                  className="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-500 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -95,7 +95,7 @@ export default function Footer() {
                   <Link
                     href={getLinkHref(link.href, link.type)}
                     onClick={(e) => handleLinkClick(e, link.href, link.type)}
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded"
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded"
                   >
                     {link.label}
                   </Link>
@@ -114,7 +114,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded"
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded"
                   >
                     {link.label}
                   </Link>

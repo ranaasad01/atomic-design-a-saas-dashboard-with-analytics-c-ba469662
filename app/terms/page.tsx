@@ -110,14 +110,14 @@ export default function TermsPage() {
         className="relative overflow-hidden bg-white dark:bg-gray-900 border-b border-black/5 dark:border-white/10"
       >
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-sky-500/5 dark:bg-sky-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-red-500/5 dark:bg-red-500/10 rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <motion.div
             variants={scaleIn}
             initial="hidden"
             animate="visible"
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-50 dark:bg-sky-500/10 border border-sky-100 dark:border-sky-500/20 text-sky-600 dark:text-sky-400 text-xs font-semibold uppercase tracking-widest mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 dark:bg-red-500/10 border border-red-100 dark:border-red-500/20 text-red-600 dark:text-red-400 text-xs font-semibold uppercase tracking-widest mb-6"
           >
             <FileText className="w-3.5 h-3.5" />
             Legal
@@ -154,7 +154,7 @@ export default function TermsPage() {
                   variants={scaleIn}
                   className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
                 >
-                  <Icon className="w-4 h-4 text-sky-500" />
+                  <Icon className="w-4 h-4 text-red-500" />
                   <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{item.label}:</span>
                   <span className="text-xs text-gray-800 dark:text-gray-200 font-semibold">{item.value}</span>
                 </motion.div>
@@ -184,9 +184,9 @@ export default function TermsPage() {
                   <a
                     key={section.id}
                     href={`#${section.id}`}
-                    className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-400 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-sky-50 dark:hover:bg-sky-500/10 transition-all duration-200 group"
+                    className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 transition-all duration-200 group"
                   >
-                    <span className="w-5 h-5 flex items-center justify-center rounded-md bg-gray-100 dark:bg-white/5 text-[10px] font-bold text-gray-400 dark:text-gray-500 group-hover:bg-sky-100 dark:group-hover:bg-sky-500/20 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-all duration-200 flex-shrink-0">
+                    <span className="w-5 h-5 flex items-center justify-center rounded-md bg-gray-100 dark:bg-white/5 text-[10px] font-bold text-gray-400 dark:text-gray-500 group-hover:bg-red-100 dark:group-hover:bg-red-500/20 group-hover:text-red-600 dark:group-hover:text-red-400 transition-all duration-200 flex-shrink-0">
                       {i + 1}
                     </span>
                     <span className="leading-tight">{section.title}</span>
@@ -212,12 +212,12 @@ export default function TermsPage() {
                   className="bg-white dark:bg-gray-900 rounded-2xl border border-black/5 dark:border-white/10 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(0,0,0,0.08)] p-7 hover:shadow-[0_1px_2px_rgba(0,0,0,0.04),0_12px_32px_-8px_rgba(0,0,0,0.12)] transition-shadow duration-300"
                 >
                   <div className="flex items-start gap-4 mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-500/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-sky-600 dark:text-sky-400" />
+                    <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-5 h-5 text-red-600 dark:text-red-400" />
                     </div>
                     <div>
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-bold text-sky-500 dark:text-sky-400 uppercase tracking-widest">
+                        <span className="text-xs font-bold text-red-500 dark:text-red-400 uppercase tracking-widest">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                       </div>
@@ -246,22 +246,22 @@ export default function TermsPage() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
-              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-sky-600 to-violet-600 p-8 text-white shadow-[0_4px_24px_rgba(99,102,241,0.35)]"
+              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-red-600 to-violet-600 p-8 text-white shadow-[0_4px_24px_rgba(99,102,241,0.35)]"
             >
               <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
               </div>
               <div className="relative">
                 <div className="flex items-center gap-3 mb-3">
-                  <Mail className="w-5 h-5 text-sky-200" />
+                  <Mail className="w-5 h-5 text-red-200" />
                   <h3 className="text-lg font-bold tracking-tight">Questions about these terms?</h3>
                 </div>
-                <p className="text-sm text-sky-100 leading-relaxed mb-5 max-w-lg">
+                <p className="text-sm text-red-100 leading-relaxed mb-5 max-w-lg">
                   Our legal team is happy to clarify any part of these Terms of Service. Reach out and we will respond within one business day.
                 </p>
                 <a
                   href="mailto:legal@easywork.io"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-sky-600 text-sm font-semibold hover:bg-sky-50 transition-colors duration-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-red-600 text-sm font-semibold hover:bg-red-50 transition-colors duration-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 >
                   <Mail className="w-4 h-4" />
                   legal@easywork.io

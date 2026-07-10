@@ -36,7 +36,7 @@ const kpis = [
     change: "+18.4%",
     positive: true,
     icon: Users,
-    color: "from-sky-500 to-violet-600",
+    color: "from-red-500 to-violet-600",
     glow: "rgba(99,102,241,0.3)",
   },
   {
@@ -45,7 +45,7 @@ const kpis = [
     change: "+23.1%",
     positive: true,
     icon: Target,
-    color: "from-sky-500 to-teal-600",
+    color: "from-red-500 to-teal-600",
     glow: "rgba(16,185,129,0.3)",
   },
   {
@@ -215,7 +215,7 @@ export default function HomePage() {
       <section className="relative min-h-[92vh] flex flex-col justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         {/* Background glow */}
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full bg-sky-500/10 dark:bg-sky-500/8 blur-[120px]" />
+          <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full bg-red-500/10 dark:bg-red-500/8 blur-[120px]" />
           <div className="absolute top-1/3 right-0 w-[400px] h-[400px] rounded-full bg-violet-500/8 blur-[100px]" />
         </div>
 
@@ -224,7 +224,7 @@ export default function HomePage() {
             {/* Left: copy */}
             <motion.div variants={sectionVariants} initial="hidden" animate="visible" className="flex flex-col gap-6">
               <motion.div variants={fadeInUp}>
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-50 dark:bg-sky-500/10 border border-sky-200 dark:border-sky-500/20 text-sky-600 dark:text-sky-400 text-xs font-semibold tracking-wide">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 text-red-600 dark:text-red-400 text-xs font-semibold tracking-wide">
                   <Sparkles className="w-3.5 h-3.5" />
                   {t("hero.badge")}
                 </span>
@@ -232,7 +232,7 @@ export default function HomePage() {
 
               <motion.h1 variants={fadeInUp} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white tracking-tight text-balance leading-[1.1]">
                 {t("hero.title.line1")}{" "}
-                <span className="bg-gradient-to-r from-sky-500 to-violet-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-500 to-violet-600 bg-clip-text text-transparent">
                   {t("hero.title.accent")}
                 </span>{" "}
                 {t("hero.title.line2")}
@@ -243,11 +243,11 @@ export default function HomePage() {
               </motion.p>
 
               <motion.div variants={fadeInUp} className="flex flex-wrap gap-3 pt-2">
-                <Link href="/dashboard" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold text-sm shadow-[0_2px_8px_rgba(99,102,241,0.4)] hover:shadow-[0_4px_20px_rgba(99,102,241,0.5)] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">
+                <Link href="/dashboard" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold text-sm shadow-[0_2px_8px_rgba(99,102,241,0.4)] hover:shadow-[0_4px_20px_rgba(99,102,241,0.5)] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2">
                   {t("hero.cta.primary")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/analytics" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-gray-50 dark:hover:bg-white/10 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">
+                <Link href="/analytics" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-gray-50 dark:hover:bg-white/10 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2">
                   {t("hero.cta.secondary")}
                 </Link>
               </motion.div>
@@ -281,7 +281,7 @@ export default function HomePage() {
                       12,847
                     </p>
                   </div>
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs font-semibold">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 text-xs font-semibold">
                     <TrendingUp className="w-3 h-3" />
                     +18.4%
                   </span>
@@ -355,11 +355,11 @@ export default function HomePage() {
                 {/* Legend */}
                 <div className="flex items-center gap-4 mt-3">
                   <span className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400">
-                    <span className="w-2.5 h-2.5 rounded-full bg-sky-500" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
                     {t("hero.chart.legend.signups")}
                   </span>
                   <span className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400">
-                    <span className="w-2.5 h-2.5 rounded-full bg-sky-500" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
                     {t("hero.chart.legend.leads")}
                   </span>
                 </div>
@@ -367,7 +367,7 @@ export default function HomePage() {
 
               {/* Floating KPI badge */}
               <motion.div animate={{ y: [0, -6, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-900 border border-black/5 dark:border-white/10 rounded-xl px-4 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.1)] flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-500 to-teal-600 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-red-500 to-teal-600 flex items-center justify-center">
                   <Users className="w-4 h-4 text-white" />
                 </div>
                 <div>
@@ -398,7 +398,7 @@ export default function HomePage() {
                     <span
                       className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
                         kpi.positive
-                          ? "bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400"
+                          ? "bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400"
                           : "bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400"
                       }`}>
                       {kpi.change}
@@ -420,7 +420,7 @@ export default function HomePage() {
       <section id="features" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div variants={fadeInUp} {...motionProps(fadeInUp)} className="text-center mb-16">
-            <span className="inline-block px-3 py-1 rounded-full bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs font-semibold tracking-wide mb-4">
+            <span className="inline-block px-3 py-1 rounded-full bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 text-xs font-semibold tracking-wide mb-4">
               {t("features.eyebrow")}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight text-balance">
@@ -437,7 +437,7 @@ export default function HomePage() {
             <motion.div
               variants={scaleIn}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="md:col-span-2 bg-gradient-to-br from-sky-500 to-violet-600 rounded-2xl p-8 text-white shadow-[0_4px_24px_rgba(99,102,241,0.3)] relative overflow-hidden"
+              className="md:col-span-2 bg-gradient-to-br from-red-500 to-violet-600 rounded-2xl p-8 text-white shadow-[0_4px_24px_rgba(99,102,241,0.3)] relative overflow-hidden"
               style={{
                 color: "#84cc16"
               }}>
@@ -452,7 +452,7 @@ export default function HomePage() {
                 }}>
                 {t("features.card1.title")}
               </h3>
-              <p className="text-sky-100 leading-relaxed text-sm max-w-md">
+              <p className="text-red-100 leading-relaxed text-sm max-w-md">
                 {t("features.card1.description")}
               </p>
               <div className="mt-6 h-24">
@@ -473,7 +473,7 @@ export default function HomePage() {
 
             {/* Tall single card */}
             <motion.div variants={fadeInUp} whileHover={{ y: -4, transition: { duration: 0.2 } }} className="bg-white dark:bg-gray-900 rounded-2xl border border-black/5 dark:border-white/10 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)]">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-teal-600 flex items-center justify-center mb-5 shadow-[0_2px_8px_rgba(16,185,129,0.3)]">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500 to-teal-600 flex items-center justify-center mb-5 shadow-[0_2px_8px_rgba(16,185,129,0.3)]">
                 <Target className="w-5 h-5 text-white" />
               </div>
               <h3 className="text-base font-bold text-gray-900 dark:text-white mb-2">
@@ -486,7 +486,7 @@ export default function HomePage() {
                 {[90, 65, 45].map((pct, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <div className="flex-1 h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-sky-500 to-teal-500 rounded-full" style={{ width: `${pct}%` }} />
+                      <div className="h-full bg-gradient-to-r from-red-500 to-teal-500 rounded-full" style={{ width: `${pct}%` }} />
                     </div>
                     <span className="text-xs text-gray-400 w-8 text-right">
                       {pct}%
@@ -501,8 +501,8 @@ export default function HomePage() {
               const Icon = feat.icon;
               return (
                 <motion.div key={feat.title} variants={fadeInUp} whileHover={{ y: -4, transition: { duration: 0.2 } }} className="bg-white dark:bg-gray-900 rounded-2xl border border-black/5 dark:border-white/10 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)]">
-                  <div className="w-9 h-9 rounded-xl bg-sky-50 dark:bg-sky-500/10 flex items-center justify-center mb-4">
-                    <Icon className="w-4 h-4 text-sky-600 dark:text-sky-400" />
+                  <div className="w-9 h-9 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center mb-4">
+                    <Icon className="w-4 h-4 text-red-600 dark:text-red-400" />
                   </div>
                   <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-1.5">
                     {feat.title}
@@ -520,7 +520,7 @@ export default function HomePage() {
       <section id="about" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
           <motion.div variants={fadeInUp} {...motionProps(fadeInUp)} className="text-center mb-16">
-            <span className="inline-block px-3 py-1 rounded-full bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs font-semibold tracking-wide mb-4">
+            <span className="inline-block px-3 py-1 rounded-full bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 text-xs font-semibold tracking-wide mb-4">
               {t("testimonials.eyebrow")}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight text-balance">
@@ -552,7 +552,7 @@ export default function HomePage() {
                   <img
                     src={t_item.avatar}
                     alt={t_item.name}
-                    className="w-9 h-9 rounded-full object-cover ring-2 ring-sky-100 dark:ring-sky-500/20"
+                    className="w-9 h-9 rounded-full object-cover ring-2 ring-red-100 dark:ring-red-500/20"
                     onError={(e) => {
                       (e.currentTarget as HTMLImageElement).src =
                         `https://ui-avatars.com/api/?name=${encodeURIComponent(t_item.name)}&background=6366F1&color=fff&size=64`;
@@ -575,7 +575,7 @@ export default function HomePage() {
       <section id="pricing" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div variants={fadeInUp} {...motionProps(fadeInUp)} className="text-center mb-16">
-            <span className="inline-block px-3 py-1 rounded-full bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs font-semibold tracking-wide mb-4">
+            <span className="inline-block px-3 py-1 rounded-full bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 text-xs font-semibold tracking-wide mb-4">
               {t("pricing.eyebrow")}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight text-balance">
@@ -593,7 +593,7 @@ export default function HomePage() {
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className={`relative rounded-2xl p-7 flex flex-col gap-5 ${
                 plan.highlighted
-                  ? "bg-gradient-to-br from-sky-600 to-violet-700 text-white shadow-[0_8px_32px_rgba(99,102,241,0.35)] border border-sky-400/30"
+                  ? "bg-gradient-to-br from-red-600 to-violet-700 text-white shadow-[0_8px_32px_rgba(99,102,241,0.35)] border border-red-400/30"
                   : "bg-white dark:bg-gray-900 border border-black/5 dark:border-white/10 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_16px_-4px_rgba(0,0,0,0.06)]"
               }`}>
               {plan.highlighted && (
@@ -605,7 +605,7 @@ export default function HomePage() {
                 <p
                   className={`text-sm font-semibold mb-1 ${
                     plan.highlighted
-                      ? "text-sky-200"
+                      ? "text-red-200"
                       : "text-gray-500 dark:text-gray-400"
                   }`}>
                   {plan.name}
@@ -623,7 +623,7 @@ export default function HomePage() {
                     <span
                       className={`text-sm mb-1 ${
                         plan.highlighted
-                          ? "text-sky-200"
+                          ? "text-red-200"
                           : "text-gray-500 dark:text-gray-400"
                       }`}>
                       {plan.period}
@@ -633,7 +633,7 @@ export default function HomePage() {
                 <p
                   className={`text-xs mt-2 leading-relaxed ${
                     plan.highlighted
-                      ? "text-sky-200"
+                      ? "text-red-200"
                       : "text-gray-500 dark:text-gray-400"
                   }`}>
                   {plan.description}
@@ -644,14 +644,14 @@ export default function HomePage() {
                   <CheckCircle
                     className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
                       plan.highlighted
-                        ? "text-sky-200"
-                        : "text-sky-500 dark:text-sky-400"
+                        ? "text-red-200"
+                        : "text-red-500 dark:text-red-400"
                     }`}
                   />
                   <span
                     className={`text-sm ${
                       plan.highlighted
-                        ? "text-sky-100"
+                        ? "text-red-100"
                         : "text-gray-700 dark:text-gray-300"
                     }`}>
                     {feat}
@@ -662,8 +662,8 @@ export default function HomePage() {
                 href="/dashboard"
                 className={`w-full text-center py-3 rounded-xl font-semibold text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
                   plan.highlighted
-                    ? "bg-white text-sky-700 hover:bg-sky-50 focus-visible:ring-white shadow-[0_2px_8px_rgba(0,0,0,0.15)]"
-                    : "bg-sky-600 hover:bg-sky-700 text-white focus-visible:ring-sky-500 shadow-[0_2px_8px_rgba(99,102,241,0.3)]"
+                    ? "bg-white text-red-700 hover:bg-red-50 focus-visible:ring-white shadow-[0_2px_8px_rgba(0,0,0,0.15)]"
+                    : "bg-red-600 hover:bg-red-700 text-white focus-visible:ring-red-500 shadow-[0_2px_8px_rgba(99,102,241,0.3)]"
                 }`}>
                 {plan.cta}
               </Link>
@@ -674,7 +674,7 @@ export default function HomePage() {
       {/* ── CTA BANNER ───────────────────────────────────────────────────── */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
         <div className="max-w-4xl mx-auto">
-          <motion.div variants={scaleIn} {...motionProps(scaleIn)} className="relative rounded-3xl bg-gradient-to-br from-sky-600 via-sky-600 to-violet-700 p-10 md:p-14 text-center overflow-hidden shadow-[0_8px_40px_rgba(99,102,241,0.35)]">
+          <motion.div variants={scaleIn} {...motionProps(scaleIn)} className="relative rounded-3xl bg-gradient-to-br from-red-600 via-red-600 to-violet-700 p-10 md:p-14 text-center overflow-hidden shadow-[0_8px_40px_rgba(99,102,241,0.35)]">
             <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
               <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-white/5" />
               <div className="absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-white/5" />
@@ -688,11 +688,11 @@ export default function HomePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight text-balance mb-4">
                 {t("cta.title")}
               </h2>
-              <p className="text-sky-200 leading-relaxed max-w-lg mx-auto mb-8 text-pretty">
+              <p className="text-red-200 leading-relaxed max-w-lg mx-auto mb-8 text-pretty">
                 {t("cta.subtitle")}
               </p>
               <div className="flex flex-wrap items-center justify-center gap-3">
-                <Link href="/dashboard" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white text-sky-700 font-bold text-sm hover:bg-sky-50 transition-all duration-300 shadow-[0_2px_12px_rgba(0,0,0,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-sky-600">
+                <Link href="/dashboard" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white text-red-700 font-bold text-sm hover:bg-red-50 transition-all duration-300 shadow-[0_2px_12px_rgba(0,0,0,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-red-600">
                   {t("cta.primary")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>

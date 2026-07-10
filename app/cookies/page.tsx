@@ -137,10 +137,10 @@ export default function CookiesPage() {
           className="mb-14"
         >
           <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-5">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-violet-600 flex items-center justify-center shadow-[0_2px_12px_rgba(99,102,241,0.4)]">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500 to-violet-600 flex items-center justify-center shadow-[0_2px_12px_rgba(99,102,241,0.4)]">
               <Cookie className="w-5 h-5 text-white" />
             </div>
-            <span className="text-sm font-medium text-sky-600 dark:text-sky-400 tracking-wide uppercase">
+            <span className="text-sm font-medium text-red-600 dark:text-red-400 tracking-wide uppercase">
               Cookie Policy
             </span>
           </motion.div>
@@ -170,10 +170,10 @@ export default function CookiesPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="bg-sky-50 dark:bg-sky-500/10 border border-sky-100 dark:border-sky-500/20 rounded-2xl p-6 mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+          className="bg-red-50 dark:bg-red-500/10 border border-red-100 dark:border-red-500/20 rounded-2xl p-6 mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
         >
           <div className="flex items-start gap-3">
-            <Info className="w-5 h-5 text-sky-500 mt-0.5 shrink-0" />
+            <Info className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
             <div>
               <p className="text-sm font-medium text-gray-900 dark:text-white">
                 Your current preferences are saved to your account.
@@ -186,13 +186,13 @@ export default function CookiesPage() {
           <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={handleRejectOptional}
-              className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl hover:bg-gray-50 dark:hover:bg-white/10 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+              className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl hover:bg-gray-50 dark:hover:bg-white/10 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
             >
               Essential only
             </button>
             <button
               onClick={handleAcceptAll}
-              className="px-4 py-2 text-sm font-medium text-white bg-sky-600 hover:bg-sky-700 rounded-xl transition-all duration-200 shadow-[0_2px_8px_rgba(99,102,241,0.35)] hover:shadow-[0_4px_16px_rgba(99,102,241,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+              className="px-4 py-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 rounded-xl transition-all duration-200 shadow-[0_2px_8px_rgba(99,102,241,0.35)] hover:shadow-[0_4px_16px_rgba(99,102,241,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
             >
               Accept all
             </button>
@@ -234,8 +234,8 @@ export default function CookiesPage() {
                 >
                   {/* Category Header */}
                   <div className="p-5 flex items-center gap-4">
-                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${isEnabled ? "bg-sky-50 dark:bg-sky-500/15" : "bg-gray-100 dark:bg-white/5"}`}>
-                      <Icon className={`w-4.5 h-4.5 ${isEnabled ? "text-sky-600 dark:text-sky-400" : "text-gray-400 dark:text-gray-500"}`} style={{ width: "18px", height: "18px" }} />
+                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${isEnabled ? "bg-red-50 dark:bg-red-500/15" : "bg-gray-100 dark:bg-white/5"}`}>
+                      <Icon className={`w-4.5 h-4.5 ${isEnabled ? "text-red-600 dark:text-red-400" : "text-gray-400 dark:text-gray-500"}`} style={{ width: "18px", height: "18px" }} />
                     </div>
 
                     <div className="flex-1 min-w-0">
@@ -244,7 +244,7 @@ export default function CookiesPage() {
                           {cat.title}
                         </h3>
                         {cat.required && (
-                          <span className="text-[10px] font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-500/15 px-2 py-0.5 rounded-full">
+                          <span className="text-[10px] font-semibold uppercase tracking-wider text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/15 px-2 py-0.5 rounded-full">
                             Required
                           </span>
                         )}
@@ -259,9 +259,9 @@ export default function CookiesPage() {
                         onClick={() => handleToggle(cat.id)}
                         disabled={cat.required}
                         aria-label={`${isEnabled ? "Disable" : "Enable"} ${cat.title}`}
-                        className={`relative w-11 h-6 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 ${
+                        className={`relative w-11 h-6 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 ${
                           cat.required ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
-                        } ${isEnabled ? "bg-sky-600" : "bg-gray-200 dark:bg-gray-700"}`}
+                        } ${isEnabled ? "bg-red-600" : "bg-gray-200 dark:bg-gray-700"}`}
                       >
                         <span
                           className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow-sm transition-transform duration-300 ${
@@ -311,7 +311,7 @@ export default function CookiesPage() {
                             <tbody className="divide-y divide-black/5 dark:divide-white/5">
                               {(cat.examples ?? []).map((ex, i) => (
                                 <tr key={i} className="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-white/3 transition-colors duration-150">
-                                  <td className="px-4 py-3 font-mono text-sky-600 dark:text-sky-400 font-medium whitespace-nowrap">{ex.name}</td>
+                                  <td className="px-4 py-3 font-mono text-red-600 dark:text-red-400 font-medium whitespace-nowrap">{ex.name}</td>
                                   <td className="px-4 py-3 text-gray-600 dark:text-gray-400 leading-relaxed">{ex.purpose}</td>
                                   <td className="px-4 py-3 text-gray-500 dark:text-gray-500 whitespace-nowrap">{ex.duration}</td>
                                   <td className="px-4 py-3">
@@ -344,10 +344,10 @@ export default function CookiesPage() {
               onClick={handleSave}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className={`flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-xl transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 ${
+              className={`flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-xl transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 ${
                 saved
                   ? "bg-green-500 text-white shadow-[0_2px_8px_rgba(34,197,94,0.35)]"
-                  : "bg-sky-600 hover:bg-sky-700 text-white shadow-[0_2px_8px_rgba(99,102,241,0.35)] hover:shadow-[0_4px_16px_rgba(99,102,241,0.45)]"
+                  : "bg-red-600 hover:bg-red-700 text-white shadow-[0_2px_8px_rgba(99,102,241,0.35)] hover:shadow-[0_4px_16px_rgba(99,102,241,0.45)]"
               }`}
             >
               {saved ? (
@@ -390,7 +390,7 @@ export default function CookiesPage() {
             {[
               { browser: "Google Chrome", steps: "Settings > Privacy and security > Cookies and other site data", color: "from-blue-500 to-cyan-500" },
               { browser: "Mozilla Firefox", steps: "Settings > Privacy & Security > Cookies and Site Data", color: "from-orange-500 to-red-500" },
-              { browser: "Apple Safari", steps: "Preferences > Privacy > Manage Website Data", color: "from-blue-400 to-sky-500" },
+              { browser: "Apple Safari", steps: "Preferences > Privacy > Manage Website Data", color: "from-blue-400 to-red-500" },
               { browser: "Microsoft Edge", steps: "Settings > Cookies and site permissions > Cookies and site data", color: "from-teal-500 to-blue-500" },
             ].map((item) => (
               <motion.div
@@ -443,7 +443,7 @@ export default function CookiesPage() {
                 >
                   <button
                     onClick={() => setExpandedFaq(isOpen ? null : i)}
-                    className="w-full flex items-center justify-between px-5 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-inset"
+                    className="w-full flex items-center justify-between px-5 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-inset"
                   >
                     <span className="text-sm font-semibold text-gray-900 dark:text-white pr-4">
                       {item.question}
@@ -484,9 +484,9 @@ export default function CookiesPage() {
         >
           <motion.div
             variants={scaleIn}
-            className="bg-gradient-to-br from-sky-50 to-violet-50 dark:from-sky-500/10 dark:to-violet-500/10 border border-sky-100 dark:border-sky-500/20 rounded-2xl p-8 text-center"
+            className="bg-gradient-to-br from-red-50 to-violet-50 dark:from-red-500/10 dark:to-violet-500/10 border border-red-100 dark:border-red-500/20 rounded-2xl p-8 text-center"
           >
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-violet-600 flex items-center justify-center mx-auto mb-4 shadow-[0_4px_16px_rgba(99,102,241,0.4)]">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-red-500 to-violet-600 flex items-center justify-center mx-auto mb-4 shadow-[0_4px_16px_rgba(99,102,241,0.4)]">
               <Shield className="w-6 h-6 text-white" />
             </div>
             <h2 className="text-xl font-bold text-gray-900 dark:text-white tracking-tight mb-2">
@@ -498,13 +498,13 @@ export default function CookiesPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href="mailto:privacy@easywork.io"
-                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-sky-600 hover:bg-sky-700 rounded-xl transition-all duration-200 shadow-[0_2px_8px_rgba(99,102,241,0.35)] hover:shadow-[0_4px_16px_rgba(99,102,241,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-red-600 hover:bg-red-700 rounded-xl transition-all duration-200 shadow-[0_2px_8px_rgba(99,102,241,0.35)] hover:shadow-[0_4px_16px_rgba(99,102,241,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
               >
                 Contact Privacy Team
               </a>
               <a
                 href="/privacy"
-                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl hover:bg-gray-50 dark:hover:bg-white/10 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl hover:bg-gray-50 dark:hover:bg-white/10 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
               >
                 Privacy Policy
                 <ChevronRight className="w-4 h-4" />
