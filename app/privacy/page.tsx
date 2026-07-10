@@ -162,9 +162,9 @@ export default function PrivacyPage() {
           animate="visible"
           className="text-center"
         >
-          <motion.div variants={scaleIn} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 mb-6">
-            <Shield className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-            <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 tracking-wide uppercase">Privacy Policy</span>
+          <motion.div variants={scaleIn} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 dark:bg-sky-500/10 border border-sky-100 dark:border-sky-500/20 mb-6">
+            <Shield className="w-4 h-4 text-sky-600 dark:text-sky-400" />
+            <span className="text-xs font-semibold text-sky-600 dark:text-sky-400 tracking-wide uppercase">Privacy Policy</span>
           </motion.div>
 
           <motion.h1
@@ -203,7 +203,7 @@ export default function PrivacyPage() {
               whileHover={{ y: -3, transition: { duration: 0.2 } }}
               className="bg-white dark:bg-gray-900 rounded-2xl border border-black/5 dark:border-white/10 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(0,0,0,0.08)] p-5 text-center"
             >
-              <p className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 mb-1">{h.value}</p>
+              <p className="text-2xl font-bold text-sky-600 dark:text-sky-400 mb-1">{h.value}</p>
               <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">{h.label}</p>
             </motion.div>
           ))}
@@ -225,9 +225,9 @@ export default function PrivacyPage() {
               <li key={s.id}>
                 <a
                   href={`#${s.id}`}
-                  className="flex items-center gap-3 group text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 py-1"
+                  className="flex items-center gap-3 group text-sm text-gray-600 dark:text-gray-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-200 py-1"
                 >
-                  <span className="w-5 h-5 rounded-full bg-indigo-50 dark:bg-indigo-500/10 flex items-center justify-center text-[10px] font-bold text-indigo-600 dark:text-indigo-400 flex-shrink-0">
+                  <span className="w-5 h-5 rounded-full bg-sky-50 dark:bg-sky-500/10 flex items-center justify-center text-[10px] font-bold text-sky-600 dark:text-sky-400 flex-shrink-0">
                     {i + 1}
                   </span>
                   <span className="group-hover:underline underline-offset-2">{s.title}</span>
@@ -255,8 +255,8 @@ export default function PrivacyPage() {
             >
               {/* Section header */}
               <div className="flex items-center gap-4 px-6 py-5 border-b border-black/5 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
-                <div className="w-9 h-9 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-4.5 h-4.5 text-indigo-600 dark:text-indigo-400" style={{ width: 18, height: 18 }} />
+                <div className="w-9 h-9 rounded-xl bg-sky-50 dark:bg-sky-500/10 flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-4.5 h-4.5 text-sky-600 dark:text-sky-400" style={{ width: 18, height: 18 }} />
                 </div>
                 <div>
                   <span className="text-[10px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest">Section {sIdx + 1}</span>
@@ -285,7 +285,7 @@ export default function PrivacyPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600 p-8 text-center shadow-[0_4px_32px_rgba(99,102,241,0.3)]"
+          className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-sky-600 to-violet-600 p-8 text-center shadow-[0_4px_32px_rgba(99,102,241,0.3)]"
         >
           {/* Background texture */}
           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
@@ -295,17 +295,17 @@ export default function PrivacyPage() {
               <Mail className="w-6 h-6 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-2 tracking-tight">Questions About Your Privacy?</h2>
-            <p className="text-indigo-100 text-sm leading-relaxed mb-6 max-w-md mx-auto">
+            <p className="text-sky-100 text-sm leading-relaxed mb-6 max-w-md mx-auto">
               Our Data Protection Officer is here to help. Reach out and we will respond within two business days.
             </p>
             <a
               href="mailto:privacy@easywork.io"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-indigo-600 font-semibold text-sm hover:bg-indigo-50 transition-all duration-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-sky-600 font-semibold text-sm hover:bg-sky-50 transition-all duration-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               <Mail className="w-4 h-4" />
               privacy@easywork.io
             </a>
-            <p className="text-indigo-200 text-xs mt-4">
+            <p className="text-sky-200 text-xs mt-4">
               Easy Work, Inc. 340 Pine Street, Suite 800, San Francisco, CA 94104
             </p>
           </div>

@@ -120,7 +120,7 @@ const kpiCards = [
     prefix: "",
     suffix: "",
     color: "indigo",
-    bg: "from-indigo-500 to-violet-600",
+    bg: "from-sky-500 to-violet-600",
   },
   {
     label: "New Leads",
@@ -140,7 +140,7 @@ const kpiCards = [
     prefix: "$",
     suffix: "",
     color: "emerald",
-    bg: "from-emerald-500 to-teal-600",
+    bg: "from-sky-500 to-teal-600",
   },
   {
     label: "Conversion Rate",
@@ -178,9 +178,9 @@ const statusConfig: Record<
   },
   converted: {
     label: "Converted",
-    bg: "bg-emerald-50 dark:bg-emerald-500/10",
-    text: "text-emerald-700 dark:text-emerald-400",
-    dot: "bg-emerald-500",
+    bg: "bg-sky-50 dark:bg-sky-500/10",
+    text: "text-sky-700 dark:text-sky-400",
+    dot: "bg-sky-500",
   },
   lost: {
     label: "Lost",
@@ -194,16 +194,16 @@ const activityFeed = [
   {
     id: "a1",
     icon: Users,
-    color: "text-indigo-500",
-    bg: "bg-indigo-50 dark:bg-indigo-500/10",
+    color: "text-sky-500",
+    bg: "bg-sky-50 dark:bg-sky-500/10",
     text: "12 new signups in the last hour",
     time: "2 min ago",
   },
   {
     id: "a2",
     icon: CheckCircle,
-    color: "text-emerald-500",
-    bg: "bg-emerald-50 dark:bg-emerald-500/10",
+    color: "text-sky-500",
+    bg: "bg-sky-50 dark:bg-sky-500/10",
     text: "Lucas Fernandez converted to paying customer",
     time: "18 min ago",
   },
@@ -308,8 +308,8 @@ export default function DashboardOverviewPage() {
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-medium border border-emerald-200 dark:border-emerald-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 dark:bg-sky-500/10 text-sky-700 dark:text-sky-400 text-xs font-medium border border-sky-200 dark:border-sky-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse" />
                 {t("dashboard.live")}
               </span>
               <span className="text-xs text-gray-400 dark:text-gray-500">
@@ -354,14 +354,14 @@ export default function DashboardOverviewPage() {
                   </p>
                   <div className="flex items-center gap-1 mt-1">
                     {isPositive ? (
-                      <ArrowUpRight className="w-3.5 h-3.5 text-emerald-500" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-sky-500" />
                     ) : (
                       <ArrowDownRight className="w-3.5 h-3.5 text-red-500" />
                     )}
                     <span
                       className={`text-xs font-medium ${
                         isPositive
-                          ? "text-emerald-600 dark:text-emerald-400"
+                          ? "text-sky-600 dark:text-sky-400"
                           : "text-red-600 dark:text-red-400"
                       }`}
                     >
@@ -587,7 +587,7 @@ export default function DashboardOverviewPage() {
             )}
             <div className="flex items-center gap-4 mt-3">
               <div className="flex items-center gap-1.5">
-                <span className="w-3 h-3 rounded-sm bg-indigo-500" />
+                <span className="w-3 h-3 rounded-sm bg-sky-500" />
                 <span className="text-xs text-gray-500 dark:text-gray-400">
                   {t("dashboard.signups")}
                 </span>
@@ -684,7 +684,7 @@ export default function DashboardOverviewPage() {
                 {t("dashboard.latestInbound")}
               </p>
             </div>
-            <button className="self-start sm:self-auto inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-medium hover:bg-indigo-100 dark:hover:bg-indigo-500/20 transition-all duration-200 border border-indigo-200 dark:border-indigo-500/20">
+            <button className="self-start sm:self-auto inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs font-medium hover:bg-sky-100 dark:hover:bg-sky-500/20 transition-all duration-200 border border-sky-200 dark:border-sky-500/20">
               <Eye className="w-3.5 h-3.5" />
               {t("dashboard.viewAll")}
             </button>
@@ -726,7 +726,7 @@ export default function DashboardOverviewPage() {
                     >
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 to-violet-500 flex items-center justify-center text-white text-xs font-semibold flex-shrink-0">
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-400 to-violet-500 flex items-center justify-center text-white text-xs font-semibold flex-shrink-0">
                             {(lead.name ?? "?").charAt(0)}
                           </div>
                           <div>
@@ -775,7 +775,7 @@ export default function DashboardOverviewPage() {
               const sc = statusConfig[lead.status] ?? statusConfig["new"];
               return (
                 <div key={lead.id} className="p-4 flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-400 to-violet-500 flex items-center justify-center text-white text-sm font-semibold flex-shrink-0">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-sky-400 to-violet-500 flex items-center justify-center text-white text-sm font-semibold flex-shrink-0">
                     {(lead.name ?? "?").charAt(0)}
                   </div>
                   <div className="flex-1 min-w-0">

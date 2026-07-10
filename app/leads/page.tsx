@@ -65,8 +65,8 @@ const RADAR_DATA = [
 const STATUS_CONFIG: Record<LeadStatus, { label: string; color: string; bg: string }> = {
   new: { label: "New", color: "text-sky-600 dark:text-sky-400", bg: "bg-sky-50 dark:bg-sky-500/10" },
   contacted: { label: "Contacted", color: "text-amber-600 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-500/10" },
-  qualified: { label: "Qualified", color: "text-indigo-600 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-500/10" },
-  converted: { label: "Converted", color: "text-emerald-600 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-500/10" },
+  qualified: { label: "Qualified", color: "text-sky-600 dark:text-sky-400", bg: "bg-sky-50 dark:bg-sky-500/10" },
+  converted: { label: "Converted", color: "text-sky-600 dark:text-sky-400", bg: "bg-sky-50 dark:bg-sky-500/10" },
   lost: { label: "Lost", color: "text-rose-600 dark:text-rose-400", bg: "bg-rose-50 dark:bg-rose-500/10" },
 };
 
@@ -117,8 +117,8 @@ function StatBadge({
 function SortIcon({ col, sortKey, sortDir }: { col: SortKey; sortKey: SortKey; sortDir: SortDir }) {
   if (col !== sortKey) return <ArrowUpDown className="w-3.5 h-3.5 text-gray-400" />;
   return sortDir === "asc"
-    ? <ArrowUp className="w-3.5 h-3.5 text-indigo-500" />
-    : <ArrowDown className="w-3.5 h-3.5 text-indigo-500" />;
+    ? <ArrowUp className="w-3.5 h-3.5 text-sky-500" />
+    : <ArrowDown className="w-3.5 h-3.5 text-sky-500" />;
 }
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -221,13 +221,13 @@ export default function LeadsPage() {
             icon={Users}
             label={t("leads.stat.total")}
             value={String(totalLeads)}
-            accent="bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400"
+            accent="bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400"
           />
           <StatBadge
             icon={Star}
             label={t("leads.stat.qualified")}
             value={String(qualifiedLeads)}
-            accent="bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
+            accent="bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400"
           />
           <StatBadge
             icon={Activity}
@@ -296,7 +296,7 @@ export default function LeadsPage() {
             </ResponsiveContainer>
             <div className="flex items-center gap-4 mt-2 justify-center">
               <span className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400">
-                <span className="w-3 h-0.5 bg-indigo-500 rounded-full inline-block" />
+                <span className="w-3 h-0.5 bg-sky-500 rounded-full inline-block" />
                 Quality
               </span>
               <span className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400">
@@ -326,7 +326,7 @@ export default function LeadsPage() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder={t("leads.filter.searchPlaceholder")}
-                  className="w-full pl-9 pr-4 py-2.5 text-sm bg-gray-50 dark:bg-gray-800 border border-black/5 dark:border-white/10 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
+                  className="w-full pl-9 pr-4 py-2.5 text-sm bg-gray-50 dark:bg-gray-800 border border-black/5 dark:border-white/10 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all duration-200"
                 />
               </div>
             </div>
@@ -341,9 +341,9 @@ export default function LeadsPage() {
                   <button
                     key={src}
                     onClick={() => setSourceFilter(src)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 ${
                       sourceFilter === src
-                        ? "bg-indigo-600 text-white shadow-[0_2px_8px_rgba(99,102,241,0.35)]"
+                        ? "bg-sky-600 text-white shadow-[0_2px_8px_rgba(99,102,241,0.35)]"
                         : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
                     }`}
                   >
@@ -366,9 +366,9 @@ export default function LeadsPage() {
                     <button
                       key={s}
                       onClick={() => setStatusFilter(s)}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
+                      className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 ${
                         isActive
-                          ? "bg-indigo-600 text-white shadow-[0_2px_8px_rgba(99,102,241,0.35)]"
+                          ? "bg-sky-600 text-white shadow-[0_2px_8px_rgba(99,102,241,0.35)]"
                           : cfg
                           ? `${cfg.bg} ${cfg.color} hover:opacity-80`
                           : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
@@ -416,7 +416,7 @@ export default function LeadsPage() {
                     >
                       <button
                         onClick={() => handleSort(col.key)}
-                        className="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded"
+                        className="flex items-center gap-1.5 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded"
                       >
                         {col.label}
                         <SortIcon col={col.key} sortKey={sortKey} sortDir={sortDir} />
@@ -445,14 +445,14 @@ export default function LeadsPage() {
                         <motion.tr
                           key={lead.id}
                           variants={rowVariant}
-                          className="border-b border-black/5 dark:border-white/5 last:border-0 hover:bg-indigo-50/40 dark:hover:bg-indigo-500/5 transition-colors duration-150 group"
+                          className="border-b border-black/5 dark:border-white/5 last:border-0 hover:bg-sky-50/40 dark:hover:bg-sky-500/5 transition-colors duration-150 group"
                           whileHover={{ x: 2 }}
                           transition={{ duration: 0.15 }}
                         >
                           {/* Name */}
                           <td className="px-5 py-3.5 whitespace-nowrap">
                             <div className="flex items-center gap-2.5">
-                              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 to-violet-500 flex items-center justify-center text-white text-xs font-semibold flex-shrink-0 shadow-[0_2px_6px_rgba(99,102,241,0.3)]">
+                              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-400 to-violet-500 flex items-center justify-center text-white text-xs font-semibold flex-shrink-0 shadow-[0_2px_6px_rgba(99,102,241,0.3)]">
                                 {(lead.name ?? "?").charAt(0)}
                               </div>
                               <span className="font-medium text-gray-900 dark:text-white">

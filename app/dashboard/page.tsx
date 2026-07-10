@@ -94,7 +94,7 @@ const kpiCards = [
     changeLabel: "vs last period",
     icon: Users,
     color: "#6366F1",
-    bg: "from-indigo-500/10 to-violet-500/5",
+    bg: "from-sky-500/10 to-violet-500/5",
     format: "number",
   },
   {
@@ -106,7 +106,7 @@ const kpiCards = [
     changeLabel: "vs last month",
     icon: DollarSign,
     color: "#10B981",
-    bg: "from-emerald-500/10 to-teal-500/5",
+    bg: "from-sky-500/10 to-teal-500/5",
     format: "currency",
   },
   {
@@ -275,9 +275,9 @@ export default function DashboardPage() {
                 <button
                   key={range}
                   onClick={() => setDateRange(range)}
-                  className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
+                  className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 ${
                     dateRange === range
-                      ? "bg-indigo-600 text-white shadow-[0_2px_8px_rgba(99,102,241,0.35)]"
+                      ? "bg-sky-600 text-white shadow-[0_2px_8px_rgba(99,102,241,0.35)]"
                       : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5"
                   }`}
                 >
@@ -287,7 +287,7 @@ export default function DashboardPage() {
             </div>
             <button
               onClick={handleRefresh}
-              className="w-9 h-9 flex items-center justify-center rounded-xl bg-white dark:bg-gray-900 border border-black/5 dark:border-white/10 text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-500/10 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.04)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+              className="w-9 h-9 flex items-center justify-center rounded-xl bg-white dark:bg-gray-900 border border-black/5 dark:border-white/10 text-gray-400 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-sky-50 dark:hover:bg-sky-500/10 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.04)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
               aria-label={t("dashboard.refresh")}
             >
               <RefreshCw
@@ -335,7 +335,7 @@ export default function DashboardPage() {
                     <span
                       className={`flex items-center gap-0.5 text-xs font-semibold px-2 py-1 rounded-full ${
                         good
-                          ? "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
+                          ? "bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400"
                           : "bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400"
                       }`}
                     >
@@ -387,7 +387,7 @@ export default function DashboardPage() {
             </div>
             <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
               <span className="flex items-center gap-1.5">
-                <span className="w-3 h-0.5 rounded-full bg-indigo-500 inline-block" />
+                <span className="w-3 h-0.5 rounded-full bg-sky-500 inline-block" />
                 {t("dashboard.signups")}
               </span>
               <span className="flex items-center gap-1.5">
@@ -578,7 +578,7 @@ export default function DashboardPage() {
                 {t("dashboard.recentSignupsDesc")}
               </p>
             </div>
-            <span className="text-xs font-medium text-indigo-600 dark:text-indigo-400 hover:underline cursor-pointer">
+            <span className="text-xs font-medium text-sky-600 dark:text-sky-400 hover:underline cursor-pointer">
               {t("dashboard.viewAll")}
             </span>
           </div>
@@ -629,7 +629,7 @@ export default function DashboardPage() {
                       <span
                         className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
                           row.plan === "Pro"
-                            ? "bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400"
+                            ? "bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400"
                             : row.plan === "Business"
                             ? "bg-violet-50 dark:bg-violet-500/10 text-violet-600 dark:text-violet-400"
                             : "bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-400"
@@ -645,7 +645,7 @@ export default function DashboardPage() {
                       <span
                         className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${
                           row.status === "Active"
-                            ? "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
+                            ? "bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400"
                             : row.status === "Trial"
                             ? "bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400"
                             : "bg-gray-100 dark:bg-white/5 text-gray-500 dark:text-gray-400"
@@ -654,7 +654,7 @@ export default function DashboardPage() {
                         <span
                           className={`w-1.5 h-1.5 rounded-full ${
                             row.status === "Active"
-                              ? "bg-emerald-500"
+                              ? "bg-sky-500"
                               : row.status === "Trial"
                               ? "bg-amber-500"
                               : "bg-gray-400"
